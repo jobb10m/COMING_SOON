@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-base text-ink font-body antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.light body {
+  @apply bg-[#F6F7F9] text-ink-light;
+}
+
+::selection {
+  background: theme('colors.kinetic.DEFAULT');
+  color: white;
+}
+
+.glass {
+  @apply bg-surface/60 border border-border backdrop-blur-xl shadow-glass;
+}
+
+html.light .glass {
+  @apply bg-white/80 border-border-light;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-kinetic focus-visible:ring-offset-2 focus-visible:ring-offset-base;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Signature: activity-ring stat gauge, evokes a fitness tracker */
+.ring-gauge {
+  transform: rotate(-90deg);
+}
+.ring-gauge circle {
+  transition: stroke-dashoffset 1s cubic-bezier(0.65, 0, 0.35, 1);
+}

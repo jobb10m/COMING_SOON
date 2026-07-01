@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Prime Gym",
+    "slug": "gym-management-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#0B0E14"
+    },
+    "ios": { "supportsTablet": true },
+    "android": { "package": "com.primegym.mobile" },
+    "extra": {
+      "apiUrl": "http://localhost:5000/api"
+    }
+  }
+}
