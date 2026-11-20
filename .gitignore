@@ -25,3 +25,7 @@ yarn-error.log*
 # Editor
 .vscode/
 .idea/
+.vercel
+.env
+.env.*
+!.env.example
